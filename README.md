@@ -61,13 +61,4 @@ I bridge the gap between **Data Science** and **Full-Stack Development**, turnin
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="40" alt="linux" />
 </div>
 
----
-
-### GitHub Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=snui1s&show_icons=true&theme=tokyonight" height="180" alt="stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=snui1s&layout=compact&theme=tokyonight" height="180" alt="languages" />
-</div>
-
 </div>
