@@ -7,8 +7,7 @@
 I'm a **Junior AI Engineer** based in **Bangkok, Thailand**.  
 I bridge the gap between **Data Science** and **Full-Stack Development**, turning raw models into interactive web applications.
 
-**Currently learning:** MLOps, Advanced RAG, Project Manager, and Agentic Workflows.  
-**Working on:** **[Kemii]** - An RPG-themed AI Workforce Planning Platform.
+**Currently learning:** MLOps, Advanced RAG, Project Manager, and Agentic Workflows.
 
 ---
 
@@ -22,8 +21,6 @@ I bridge the gap between **Data Science** and **Full-Stack Development**, turnin
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript" />
   <img width="10" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript" />
-  <img width="10" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg" height="40" alt="rust" />
   <img width="10" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="40" alt="cplusplus" />
   <img width="10" />
