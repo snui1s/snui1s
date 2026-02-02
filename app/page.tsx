@@ -286,12 +286,7 @@ export default function Home() {
             </h2>
 
             <div className="grid gap-12">
-              <a
-                href="https://github.com/snui1s/Raku"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative block"
-              >
+              <div className="group relative block">
                 <div className="absolute -inset-4 bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                 <div className="relative">
                   <span className="text-xs font-bold tracking-[0.2em] text-brand uppercase mb-2 block">
@@ -300,7 +295,7 @@ export default function Home() {
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
                       楽 Raku
-                    </h3>
+                    </a>
                     <div className="h-0.5 grow mx-8 bg-foreground/10 group-hover:bg-brand/30 transition-colors hidden md:block"></div>
                     <span className="text-sm font-mono text-text-secondary">
                       01
@@ -309,9 +304,26 @@ export default function Home() {
                   <p className="text-lg md:text-xl text-text-secondary font-light max-w-3xl leading-relaxed">
                     A blazing-fast, distraction-free note-taking app. <br />
                     <span className="text-foreground/80 italic font-medium">
-                      Smarter than Notepad, simpler than Notion.
+                      Emphasizes speed and simplicity with robust auto-save
+                      capabilities and native performance.
                     </span>
                   </p>
+                  <div className="mt-6 flex flex-wrap gap-x-3 gap-y-2 text-[10px] font-bold tracking-[0.15em] text-text-secondary/40 uppercase">
+                    {[
+                      "Native Application Development",
+                      "Cross-Platform Desktop App",
+                      "High-Performance Computing",
+                      "UI/UX Development",
+                      "Local Data Persistence",
+                    ].map((skill, i, arr) => (
+                      <span key={skill} className="flex items-center gap-3">
+                        {skill}
+                        {i < arr.length - 1 && (
+                          <span className="text-brand/20">•</span>
+                        )}
+                      </span>
+                    ))}
+                  </div>
                   <div className="mt-8 flex gap-6 text-2xl text-text-secondary/60">
                     <div className="group/icon relative">
                       <SiReact className="hover:text-[#61DAFB] transition-colors" />
@@ -339,14 +351,9 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </a>
+              </div>
 
-              <a
-                href="https://github.com/snui1s/Kemii"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative block"
-              >
+              <div className="group relative block">
                 <div className="absolute -inset-4 bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                 <div className="relative">
                   <span className="text-xs font-bold tracking-[0.2em] text-brand uppercase mb-2 block">
@@ -362,13 +369,30 @@ export default function Home() {
                     </span>
                   </div>
                   <p className="text-lg md:text-xl text-text-secondary font-light max-w-3xl leading-relaxed">
-                    AI-driven Guild Support System using the OCEAN model to
-                    build high-performance teams. <br />
+                    A comprehensive team optimization system leveraging psychometric
+                    data and V&apos;s proprietary Kemii Golden Formula. <br />
                     <span className="text-foreground/80 italic font-medium">
-                      Intelligent team matching through psychology and
-                      gamification.
+                      Ensures balanced teams with high skill coverage and harmony,
+                      featuring a Generative AI Guild Strategist for coaching.
                     </span>
                   </p>
+                  <div className="mt-6 flex flex-wrap gap-x-3 gap-y-2 text-[10px] font-bold tracking-[0.15em] text-text-secondary/40 uppercase">
+                    {[
+                      "Proprietary Optimization & Matching Algorithms",
+                      "Statistical Analysis & Modeling",
+                      "Generative AI Strategic Guidance",
+                      "Full-Stack System Design",
+                      "API & System Security (JWT/RBAC)",
+                      "Database Design & Management",
+                    ].map((skill, i, arr) => (
+                      <span key={skill} className="flex items-center gap-3">
+                        {skill}
+                        {i < arr.length - 1 && (
+                          <span className="text-brand/20">•</span>
+                        )}
+                      </span>
+                    ))}
+                  </div>
                   <div className="mt-8 flex gap-6 text-2xl text-text-secondary/60">
                     <div className="group/icon relative">
                       <SiFastapi className="hover:text-[#05998B] transition-colors" />
@@ -469,20 +493,38 @@ export default function Home() {
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
                       CareerPath AI
-                    </h3>
+                    </a>
                     <div className="h-0.5 grow mx-8 bg-foreground/10 group-hover:bg-brand/30 transition-colors hidden md:block"></div>
                     <span className="text-sm font-mono text-text-secondary">
                       04
                     </span>
                   </div>
                   <p className="text-lg md:text-xl text-text-secondary font-light max-w-3xl leading-relaxed">
-                    AI-powered skill gap analysis and course recommendation
-                    engine (RAG). <br />
+                    An intelligent AI-powered career advisory engine that
+                    analyzes career goals and identifies skill gaps. <br />
                     <span className="text-foreground/80 italic font-medium">
-                      Personalized learning paths integrated with Coursera and
-                      SkillLane.
+                      Recommends personalized learning paths with context-aware
+                      guidance for professional growth.
                     </span>
                   </p>
+                  <div className="mt-6 flex flex-wrap gap-x-3 gap-y-2 text-[10px] font-bold tracking-[0.15em] text-text-secondary/40 uppercase">
+                    {[
+                      "RAG Architecture",
+                      "LLM Application Development",
+                      "ETL Pipeline",
+                      "Vector Search & Retrieval",
+                      "Semantic Search",
+                      "Personalized Recommendation Systems",
+                      "Conversational AI Context Management",
+                    ].map((skill, i, arr) => (
+                      <span key={skill} className="flex items-center gap-3">
+                        {skill}
+                        {i < arr.length - 1 && (
+                          <span className="text-brand/20">•</span>
+                        )}
+                      </span>
+                    ))}
+                  </div>
                   <div className="mt-8 flex gap-6 text-2xl text-text-secondary/60">
                     <div className="group/icon relative">
                       <SiPython className="hover:text-[#3776AB] transition-colors" />
@@ -493,12 +535,24 @@ export default function Home() {
                     <div className="group/icon relative">
                       <HiSparkles className="hover:text-brand transition-colors" />
                       <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold tracking-widest uppercase opacity-0 group-hover/icon:opacity-100 transition-opacity bg-background px-2 py-1 rounded">
-                        RAG AI
+                        RAG
+                      </span>
+                    </div>
+                    <div className="group/icon relative">
+                      <SiLangchain className="hover:text-[#121212] transition-colors" />
+                      <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold tracking-widest uppercase opacity-0 group-hover/icon:opacity-100 transition-opacity bg-background px-2 py-1 rounded whitespace-nowrap">
+                        LangChain
+                      </span>
+                    </div>
+                    <div className="group/icon relative">
+                      <FaDatabase className="hover:text-[#3178C6] transition-colors" />
+                      <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold tracking-widest uppercase opacity-0 group-hover/icon:opacity-100 transition-opacity bg-background px-2 py-1 rounded whitespace-nowrap">
+                        ChromaDB
                       </span>
                     </div>
                   </div>
                 </div>
-              </a>
+              </div>
 
               <a
                 href="https://github.com/snui1s/recruitment_site_scraper"
@@ -514,20 +568,40 @@ export default function Home() {
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
                       Candidate Scraper
-                    </h3>
+                    </a>
                     <div className="h-0.5 grow mx-8 bg-foreground/10 group-hover:bg-brand/30 transition-colors hidden md:block"></div>
                     <span className="text-sm font-mono text-text-secondary">
                       05
                     </span>
                   </div>
                   <p className="text-lg md:text-xl text-text-secondary font-light max-w-3xl leading-relaxed">
-                    Automated data extraction tool for job portals with secure
-                    session management. <br />
+                    An automated tool designed for efficient job candidate data
+                    extraction and resume collection. <br />
                     <span className="text-foreground/80 italic font-medium">
-                      High-performance scraping engine processing candidate
-                      datasets into structured formats.
+                      Featuring auto-restart, deduplication, and seamless Excel
+                      export capabilities for recruiters.
                     </span>
                   </p>
+                  <div className="mt-6 flex flex-wrap gap-x-3 gap-y-2 text-[10px] font-bold tracking-[0.15em] text-text-secondary/40 uppercase">
+                    {[
+                      "Web Scraping Automation",
+                      "Headless Browser Automation",
+                      "Data Extraction",
+                      "Data Deduplication",
+                      "Batch Processing",
+                      "Robust Error Handling",
+                      "Session Management",
+                      "Data Export",
+                      "File Management",
+                    ].map((skill, i, arr) => (
+                      <span key={skill} className="flex items-center gap-3">
+                        {skill}
+                        {i < arr.length - 1 && (
+                          <span className="text-brand/20">•</span>
+                        )}
+                      </span>
+                    ))}
+                  </div>
                   <div className="mt-8 flex gap-6 text-2xl text-text-secondary/60">
                     <div className="group/icon relative">
                       <SiPython className="hover:text-[#3776AB] transition-colors" />
@@ -551,12 +625,7 @@ export default function Home() {
                 </div>
               </a>
 
-              <a
-                href="https://github.com/snui1s/Pawee_ChatBot"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative block"
-              >
+              <div className="group relative block">
                 <div className="absolute -inset-4 bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                 <div className="relative">
                   <span className="text-xs font-bold tracking-[0.2em] text-brand uppercase mb-2 block">
@@ -565,20 +634,37 @@ export default function Home() {
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
                       Pawee ChatBot
-                    </h3>
+                    </a>
                     <div className="h-0.5 grow mx-8 bg-foreground/10 group-hover:bg-brand/30 transition-colors hidden md:block"></div>
                     <span className="text-sm font-mono text-text-secondary">
                       06
                     </span>
                   </div>
                   <p className="text-lg md:text-xl text-text-secondary font-light max-w-3xl leading-relaxed">
-                    Interactive personal AI assistant designed to showcase
-                    professional experience. <br />
+                    A personalized interactive AI assistant serving as a digital
+                    representative. <br />
                     <span className="text-foreground/80 italic font-medium">
-                      Features proactive email recording and smart query logging
-                      for seamless lead generation.
+                      Answers profile questions using LinkedIn context with
+                      email recording and query logging features.
                     </span>
                   </p>
+                  <div className="mt-6 flex flex-wrap gap-x-3 gap-y-2 text-[10px] font-bold tracking-[0.15em] text-text-secondary/40 uppercase">
+                    {[
+                      "Personal AI Assistant Development",
+                      "RAG-like Contextual Retrieval",
+                      "LLM Integration",
+                      "Information Extraction",
+                      "Lead Generation Automation",
+                      "Feature Logging",
+                    ].map((skill, i, arr) => (
+                      <span key={skill} className="flex items-center gap-3">
+                        {skill}
+                        {i < arr.length - 1 && (
+                          <span className="text-brand/20">•</span>
+                        )}
+                      </span>
+                    ))}
+                  </div>
                   <div className="mt-8 flex gap-6 text-2xl text-text-secondary/60">
                     <div className="group/icon relative">
                       <SiPython className="hover:text-[#3776AB] transition-colors" />
@@ -594,7 +680,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
         </section>
