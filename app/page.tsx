@@ -1,4 +1,4 @@
-import Image from "next/image";
+import NextImage from "next/image";
 import {
   SiReact,
   SiTauri,
@@ -16,32 +16,59 @@ import {
   SiTensorflow,
   SiKeras,
   SiJupyter,
-  SiGooglecolab,
   SiGit,
   SiDocker,
   SiNodedotjs,
   SiExpress,
   SiSqlite,
   SiPytorch,
+  SiLangchain,
+  SiGithub,
+  SiPostgresql,
+  SiHuggingface,
+  SiVercel,
+  SiRender,
 } from "react-icons/si";
 import { TbTerminal2 } from "react-icons/tb";
 import {
   HiSparkles,
-  HiLockClosed,
   HiAcademicCap,
   HiEnvelope,
   HiPhone,
-  HiGlobeAlt,
   HiMapPin,
 } from "react-icons/hi2";
-import { FaJava } from "react-icons/fa6";
+import { FaJava, FaDatabase } from "react-icons/fa6";
+import WavyDivider from "./components/WavyDivider";
+
+const LuckyCat = () => {
+  return (
+    <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 group cursor-pointer select-none">
+      <div className="relative flex items-end gap-1">
+        {/* Waving Hand */}
+        <span className="text-3xl md:text-4xl cat-waver inline-block origin-bottom-right">
+          👋
+        </span>
+        {/* Cat */}
+        <span className="text-4xl md:text-5xl transition-transform duration-300 group-hover:scale-110">
+          🐱
+        </span>
+      </div>
+      {/* Tooltip */}
+      <div className="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 text-[10px] uppercase tracking-widest font-black whitespace-nowrap hidden md:block">
+        Good luck!
+      </div>
+    </div>
+  );
+};
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground selection:bg-brand selection:text-background">
+    <div className="min-h-screen bg-background text-foreground selection:bg-brand selection:text-background relative overflow-x-hidden">
+      {/* Background Detail */}
+      <LuckyCat />
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center px-8 py-6 backdrop-blur-sm lg:px-24">
-        <div className="flex gap-8 text-sm font-medium tracking-wide text-text-secondary uppercase cursor-pointer">
+      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center px-4 py-4 md:py-6 bg-background border-b border-white/5 shadow-lg lg:px-24">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-[10px] md:text-sm font-medium tracking-wide text-text-secondary uppercase cursor-pointer">
           {["Home", "Experience", "Projects", "About Me", "Contact"].map(
             (item) => (
               <a
@@ -58,7 +85,7 @@ export default function Home() {
       </nav>
 
       {/* Main Content */}
-      <main className="px-8 lg:px-24">
+      <main className="px-4 md:px-8 lg:px-24">
         {/* Hero Section */}
         <section
           id="home"
@@ -68,7 +95,7 @@ export default function Home() {
             <div className="relative w-32 h-32 md:w-48 md:h-48 mb-8 group">
               <div className="absolute -inset-1 bg-brand rounded-full blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
               <div className="relative w-full h-full rounded-full border-4 border-brand overflow-hidden">
-                <Image
+                <NextImage
                   src="/profilepic2.jpg"
                   alt="Pawee Profile"
                   fill
@@ -81,13 +108,13 @@ export default function Home() {
             <p className="mb-4 text-xs md:text-sm font-medium tracking-[0.2em] text-text-secondary uppercase">
               Wanna build cool things, making mistakes, burnout.
             </p>
-            <h1 className="text-6xl md:text-9xl font-black tracking-tighter leading-none mb-6">
+            <h1 className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter leading-none mb-6">
               I&apos;m <span className="text-brand">Pawee</span>
             </h1>
             <p className="max-w-2xl text-lg md:text-xl text-text-secondary leading-relaxed font-light">
-              I&apos;m a{" "}
+              A{" "}
               <span className="text-foreground font-medium">
-                Junior AI Engineer
+                Below Junior AI Engineer
               </span>{" "}
               based in Bangkok, Thailand. <br />I bridge the gap between{" "}
               <span className="text-brand font-medium">Data Science</span> and{" "}
@@ -108,7 +135,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="w-full h-px bg-brand/50 max-w-4xl mx-auto" />
+        <WavyDivider variant={1} />
 
         {/* Experience Section */}
         <section
@@ -116,7 +143,7 @@ export default function Home() {
           className="min-h-screen py-32 flex flex-col items-center justify-center scroll-mt-2"
         >
           <div className="max-w-4xl w-full">
-            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-16 underline decoration-brand decoration-4 underline-offset-8">
+            <h2 className="text-3xl md:text-6xl font-black tracking-tighter mb-16 underline decoration-brand decoration-4 underline-offset-8">
               Experience
             </h2>
 
@@ -246,7 +273,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="w-full h-px bg-brand/50 max-w-4xl mx-auto" />
+        <WavyDivider variant={2} />
 
         {/* Projects Section */}
         <section
@@ -254,7 +281,7 @@ export default function Home() {
           className="min-h-screen py-32 flex flex-col items-center justify-center scroll-mt-2"
         >
           <div className="max-w-4xl w-full">
-            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-16 underline decoration-brand decoration-4 underline-offset-8">
+            <h2 className="text-3xl md:text-6xl font-black tracking-tighter mb-16 underline decoration-brand decoration-4 underline-offset-8">
               Projects
             </h2>
 
@@ -270,7 +297,7 @@ export default function Home() {
                   <span className="text-xs font-bold tracking-[0.2em] text-brand uppercase mb-2 block">
                     Featured Project
                   </span>
-                  <div className="flex items-baseline justify-between mb-4">
+                  <div className="flex items-center justify-between mb-4">
                     <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
                       楽 Raku
                     </h3>
@@ -323,9 +350,9 @@ export default function Home() {
                 <div className="absolute -inset-4 bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                 <div className="relative">
                   <span className="text-xs font-bold tracking-[0.2em] text-brand uppercase mb-2 block">
-                    AI & Psychology
+                    Intern Project • AI & Psychology
                   </span>
-                  <div className="flex items-baseline justify-between mb-4">
+                  <div className="flex items-center justify-between mb-4">
                     <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
                       Kemii
                     </h3>
@@ -372,6 +399,63 @@ export default function Home() {
               </a>
 
               <a
+                href="https://github.com/snui1s/skrut_ai_web"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block"
+              >
+                <div className="absolute -inset-4 bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                <div className="relative">
+                  <span className="text-xs font-bold tracking-[0.2em] text-brand uppercase mb-2 block">
+                    AI Agent
+                  </span>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
+                      Skrut AI
+                    </h3>
+                    <div className="h-0.5 grow mx-8 bg-foreground/10 group-hover:bg-brand/30 transition-colors hidden md:block"></div>
+                    <span className="text-sm font-mono text-text-secondary">
+                      03
+                    </span>
+                  </div>
+                  <p className="text-lg md:text-xl text-text-secondary font-light max-w-3xl leading-relaxed">
+                    The Intelligent Resume Evaluation Agent for Modern HR.{" "}
+                    <br />
+                    <span className="text-foreground/80 italic font-medium">
+                      High-performance, privacy-first tool for evaluating
+                      resumes beyond keyword matching.
+                    </span>
+                  </p>
+                  <div className="mt-8 flex gap-6 text-2xl text-text-secondary/60">
+                    <div className="group/icon relative">
+                      <SiFastapi className="hover:text-[#05998B] transition-colors" />
+                      <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold tracking-widest uppercase opacity-0 group-hover/icon:opacity-100 transition-opacity bg-background px-2 py-1 rounded">
+                        FastAPI
+                      </span>
+                    </div>
+                    <div className="group/icon relative">
+                      <SiNextdotjs className="hover:text-foreground transition-colors" />
+                      <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold tracking-widest uppercase opacity-0 group-hover/icon:opacity-100 transition-opacity bg-background px-2 py-1 rounded">
+                        Next.js
+                      </span>
+                    </div>
+                    <div className="group/icon relative">
+                      <SiLangchain className="hover:text-brand transition-colors" />
+                      <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold tracking-widest uppercase opacity-0 group-hover/icon:opacity-100 transition-opacity bg-background px-2 py-1 rounded">
+                        LangGraph
+                      </span>
+                    </div>
+                    <div className="group/icon relative">
+                      <SiTailwindcss className="hover:text-[#06B6D4] transition-colors" />
+                      <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-bold tracking-widest uppercase opacity-0 group-hover/icon:opacity-100 transition-opacity bg-background px-2 py-1 rounded">
+                        Tailwind
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a
                 href="https://github.com/snui1s/careerpath_ai"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -380,15 +464,15 @@ export default function Home() {
                 <div className="absolute -inset-4 bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                 <div className="relative">
                   <span className="text-xs font-bold tracking-[0.2em] text-brand uppercase mb-2 block">
-                    Data & AI
+                    Intern Project • Data & AI
                   </span>
-                  <div className="flex items-baseline justify-between mb-4">
+                  <div className="flex items-center justify-between mb-4">
                     <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
                       CareerPath AI
                     </h3>
                     <div className="h-0.5 grow mx-8 bg-foreground/10 group-hover:bg-brand/30 transition-colors hidden md:block"></div>
                     <span className="text-sm font-mono text-text-secondary">
-                      03
+                      04
                     </span>
                   </div>
                   <p className="text-lg md:text-xl text-text-secondary font-light max-w-3xl leading-relaxed">
@@ -416,24 +500,24 @@ export default function Home() {
                 </div>
               </a>
 
-              <div className="group relative block opacity-80 hover:opacity-100 transition-opacity">
+              <a
+                href="https://github.com/snui1s/recruitment_site_scraper"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block"
+              >
                 <div className="absolute -inset-4 bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                 <div className="relative">
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="text-xs font-bold tracking-[0.2em] text-brand uppercase block">
-                      Automation & Data
-                    </span>
-                    <span className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-foreground/10 text-[10px] font-bold text-text-secondary uppercase tracking-widest">
-                      <HiLockClosed className="text-[10px]" /> Private
-                    </span>
-                  </div>
-                  <div className="flex items-baseline justify-between mb-4">
-                    <h3 className="text-3xl md:text-5xl font-black tracking-tight transition-colors">
+                  <span className="text-xs font-bold tracking-[0.2em] text-brand uppercase mb-2 block">
+                    Intern Project • Automation & Data
+                  </span>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
                       Candidate Scraper
                     </h3>
                     <div className="h-0.5 grow mx-8 bg-foreground/10 group-hover:bg-brand/30 transition-colors hidden md:block"></div>
                     <span className="text-sm font-mono text-text-secondary">
-                      04
+                      05
                     </span>
                   </div>
                   <p className="text-lg md:text-xl text-text-secondary font-light max-w-3xl leading-relaxed">
@@ -465,7 +549,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
 
               <a
                 href="https://github.com/snui1s/Pawee_ChatBot"
@@ -478,13 +562,13 @@ export default function Home() {
                   <span className="text-xs font-bold tracking-[0.2em] text-brand uppercase mb-2 block">
                     Interactive AI
                   </span>
-                  <div className="flex items-baseline justify-between mb-4">
+                  <div className="flex items-center justify-between mb-4">
                     <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
                       Pawee ChatBot
                     </h3>
                     <div className="h-0.5 grow mx-8 bg-foreground/10 group-hover:bg-brand/30 transition-colors hidden md:block"></div>
                     <span className="text-sm font-mono text-text-secondary">
-                      05
+                      06
                     </span>
                   </div>
                   <p className="text-lg md:text-xl text-text-secondary font-light max-w-3xl leading-relaxed">
@@ -515,7 +599,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="w-full h-px bg-brand/50 max-w-4xl mx-auto" />
+        <WavyDivider variant={3} />
 
         {/* About Me Section */}
         <section
@@ -523,7 +607,7 @@ export default function Home() {
           className="min-h-screen py-32 flex flex-col items-center justify-center scroll-mt-2"
         >
           <div className="max-w-4xl w-full">
-            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-16 underline decoration-brand decoration-4 underline-offset-8 text-center md:text-left">
+            <h2 className="text-3xl md:text-6xl font-black tracking-tighter mb-16 underline decoration-brand decoration-4 underline-offset-8 text-center md:text-left">
               About Me
             </h2>
 
@@ -555,8 +639,7 @@ export default function Home() {
                     <HiAcademicCap className="text-sm" /> Education
                   </h3>
                   <div className="space-y-10">
-                    <div className="relative pl-8 border-l border-brand/20 hover:border-brand transition-colors">
-                      <div className="absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-brand shadow-[0_0_10px_rgba(250,129,18,0.5)]"></div>
+                    <div className="group">
                       <h4 className="text-xl font-black mb-1">
                         King Mongkut&apos;s University of Technology North
                         Bangkok
@@ -571,8 +654,7 @@ export default function Home() {
                         GPA: 3.80
                       </p>
                     </div>
-                    <div className="relative pl-8 border-l border-white/10 hover:border-white/30 transition-colors opacity-60">
-                      <div className="absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-white/20"></div>
+                    <div className="opacity-60 group">
                       <h4 className="text-xl font-bold mb-1">
                         Samutsakorn Technical College
                       </h4>
@@ -595,8 +677,7 @@ export default function Home() {
                     <HiSparkles className="text-sm" /> Student Projects
                   </h3>
                   <div className="space-y-10">
-                    <div className="relative pl-8 border-l border-brand/20 hover:border-brand transition-colors">
-                      <div className="absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-brand"></div>
+                    <div className="group">
                       <h4 className="text-xl font-black mb-1">
                         Movie Review Web App
                       </h4>
@@ -609,8 +690,7 @@ export default function Home() {
                         systems.
                       </p>
                     </div>
-                    <div className="relative pl-8 border-l border-white/10 hover:border-white/30 transition-colors">
-                      <div className="absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-white/20"></div>
+                    <div className="group">
                       <h4 className="text-xl font-bold mb-1">
                         Real-Time Detection of Chickens and Eggs
                       </h4>
@@ -622,8 +702,7 @@ export default function Home() {
                         annotated images via Roboflow.
                       </p>
                     </div>
-                    <div className="relative pl-8 border-l border-white/10 hover:border-white/30 transition-colors opacity-80">
-                      <div className="absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-white/10"></div>
+                    <div className="opacity-80 group">
                       <h4 className="text-xl font-bold mb-1">
                         Defective Tire Classification
                       </h4>
@@ -635,6 +714,50 @@ export default function Home() {
                         manufacturing quality control.
                       </p>
                     </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Full Width: Personal Note */}
+              <div className="relative p-6 md:p-12 rounded-3xl bg-white/5 border border-white/10 overflow-hidden group">
+                <div className="absolute top-0 right-0 w-2 h-full bg-brand"></div>
+                <div className="relative">
+                  <h3 className="text-xs font-bold tracking-[0.2em] text-brand uppercase mb-6 flex items-center gap-2 justify-start md:justify-end">
+                    Behind the Code <HiSparkles />
+                  </h3>
+                  <div className="space-y-4 text-left md:text-right">
+                    <p className="text-xl md:text-2xl font-medium text-foreground">
+                      Hi, I&apos;m Pawee. Thanks for stopping by!
+                    </p>
+                    <p className="text-lg text-text-secondary leading-relaxed font-light">
+                      You&apos;ll see many projects here because I&apos;m a big
+                      believer in{" "}
+                      <span className="text-foreground font-medium border-b border-brand/20 pb-0.5">
+                        AI-augmented development
+                      </span>{" "}
+                      (Vibe Coding). <br></br>I use AI as a speed booster to
+                      handle the coding, so I can focus on my true goal{" "}
+                      <br></br> to being a{" "}
+                      <span className="text-brand font-bold">
+                        Problem Solver
+                      </span>{" "}
+                      and an{" "}
+                      <span className="text-brand font-bold">
+                        Aspiring Product Manager
+                      </span>
+                      .
+                    </p>
+                    <p className="text-lg text-text-secondary leading-relaxed font-light">
+                      I believe in building for the community, so all my
+                      projects are{" "}
+                      <span className="text-foreground font-bold bg-white/5 px-2 py-0.5 rounded">
+                        Open Source
+                      </span>
+                      . Feel free to use them or build something even better!{" "}
+                      <span className="text-brand font-medium">
+                        Thanks for checking out my work.
+                      </span>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -731,9 +854,27 @@ export default function Home() {
                       </span>
                     </div>
                     <div className="group/s relative cursor-pointer">
-                      <HiSparkles className="group-hover/s:text-brand transition-colors text-2xl" />
+                      <SiLangchain className="group-hover/s:text-brand transition-colors text-2xl" />
                       <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] bg-background px-2 py-1 rounded opacity-0 group-hover/s:opacity-100 transition-opacity">
-                        LangChain
+                        LangGraph
+                      </span>
+                    </div>
+                    <div className="group/s relative cursor-pointer">
+                      <SiHuggingface className="group-hover/s:text-[#FFD21E] transition-colors" />
+                      <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] bg-background px-2 py-1 rounded opacity-0 group-hover/s:opacity-100 transition-opacity">
+                        HuggingFace
+                      </span>
+                    </div>
+                    <div className="group/s relative cursor-pointer">
+                      <FaDatabase className="group-hover/s:text-brand transition-colors" />
+                      <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] bg-background px-2 py-1 rounded opacity-0 group-hover/s:opacity-100 transition-opacity">
+                        ChromaDB
+                      </span>
+                    </div>
+                    <div className="group/s relative cursor-pointer">
+                      <FaDatabase className="group-hover/s:text-[#E91E63] transition-colors" />
+                      <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] bg-background px-2 py-1 rounded opacity-0 group-hover/s:opacity-100 transition-opacity">
+                        Qdrant
                       </span>
                     </div>
                   </div>
@@ -793,6 +934,12 @@ export default function Home() {
                   </p>
                   <div className="flex flex-wrap gap-4 text-3xl text-text-secondary/60">
                     <div className="group/s relative cursor-pointer">
+                      <SiPostgresql className="group-hover/s:text-[#336791] transition-colors" />
+                      <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] bg-background px-2 py-1 rounded opacity-0 group-hover/s:opacity-100 transition-opacity">
+                        PostgreSQL
+                      </span>
+                    </div>
+                    <div className="group/s relative cursor-pointer">
                       <SiSqlite className="group-hover/s:text-[#003B57] transition-colors" />
                       <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] bg-background px-2 py-1 rounded opacity-0 group-hover/s:opacity-100 transition-opacity">
                         SQLite
@@ -823,9 +970,15 @@ export default function Home() {
                       </span>
                     </div>
                     <div className="group/s relative cursor-pointer">
-                      <SiGooglecolab className="group-hover/s:text-[#F9AB00] transition-colors" />
+                      <SiVercel className="group-hover/s:text-foreground transition-colors" />
                       <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] bg-background px-2 py-1 rounded opacity-0 group-hover/s:opacity-100 transition-opacity">
-                        Colab
+                        Vercel
+                      </span>
+                    </div>
+                    <div className="group/s relative cursor-pointer">
+                      <SiRender className="group-hover/s:text-[#D6F8F0] transition-colors" />
+                      <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] bg-background px-2 py-1 rounded opacity-0 group-hover/s:opacity-100 transition-opacity">
+                        Render
                       </span>
                     </div>
                   </div>
@@ -835,7 +988,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="w-full h-px bg-brand/50 max-w-4xl mx-auto" />
+        <WavyDivider variant={1} />
 
         {/* Contact Section */}
         <section
@@ -843,7 +996,7 @@ export default function Home() {
           className="min-h-screen py-32 flex flex-col items-center justify-center scroll-mt-2"
         >
           <div className="max-w-4xl w-full text-center">
-            <h2 className="text-4xl md:text-8xl font-black tracking-tighter mb-8 leading-none">
+            <h2 className="text-3xl md:text-8xl font-black tracking-tighter mb-8 leading-none">
               LET&apos;S <span className="text-brand">CONNECT</span>
             </h2>
             <div className="flex flex-col md:flex-row gap-8 justify-center items-center mt-12 mb-20 text-text-secondary">
@@ -865,7 +1018,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-brand transition-colors text-lg"
               >
-                <HiGlobeAlt className="text-brand" /> github.com/snui1s
+                <SiGithub className="text-brand" /> github.com/snui1s
               </a>
             </div>
 
