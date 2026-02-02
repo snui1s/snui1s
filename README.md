@@ -36,7 +36,4 @@ Everything I build here is **Open Source**. I believe knowledge should be shared
 ---
 
 <div align="center">
-
-_"I didn't lose you. I just finally learned how to love you from a distance that doesn't hurt anymore."_
-
 </div>

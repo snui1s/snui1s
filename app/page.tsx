@@ -295,7 +295,7 @@ export default function Home() {
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
                       楽 Raku
-                    </a>
+                    </h3>
                     <div className="h-0.5 grow mx-8 bg-foreground/10 group-hover:bg-brand/30 transition-colors hidden md:block"></div>
                     <span className="text-sm font-mono text-text-secondary">
                       01
@@ -369,11 +369,13 @@ export default function Home() {
                     </span>
                   </div>
                   <p className="text-lg md:text-xl text-text-secondary font-light max-w-3xl leading-relaxed">
-                    A comprehensive team optimization system leveraging psychometric
-                    data and V&apos;s proprietary Kemii Golden Formula. <br />
+                    A comprehensive team optimization system leveraging
+                    psychometric data and V&apos;s proprietary Kemii Golden
+                    Formula. <br />
                     <span className="text-foreground/80 italic font-medium">
-                      Ensures balanced teams with high skill coverage and harmony,
-                      featuring a Generative AI Guild Strategist for coaching.
+                      Ensures balanced teams with high skill coverage and
+                      harmony, featuring a Generative AI Guild Strategist for
+                      coaching.
                     </span>
                   </p>
                   <div className="mt-6 flex flex-wrap gap-x-3 gap-y-2 text-[10px] font-bold tracking-[0.15em] text-text-secondary/40 uppercase">
@@ -420,7 +422,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </a>
+              </div>
 
               <a
                 href="https://github.com/snui1s/skrut_ai_web"
@@ -493,7 +495,7 @@ export default function Home() {
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
                       CareerPath AI
-                    </a>
+                    </h3>
                     <div className="h-0.5 grow mx-8 bg-foreground/10 group-hover:bg-brand/30 transition-colors hidden md:block"></div>
                     <span className="text-sm font-mono text-text-secondary">
                       04
@@ -552,7 +554,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
 
               <a
                 href="https://github.com/snui1s/recruitment_site_scraper"
@@ -568,7 +570,7 @@ export default function Home() {
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
                       Candidate Scraper
-                    </a>
+                    </h3>
                     <div className="h-0.5 grow mx-8 bg-foreground/10 group-hover:bg-brand/30 transition-colors hidden md:block"></div>
                     <span className="text-sm font-mono text-text-secondary">
                       05
@@ -634,7 +636,7 @@ export default function Home() {
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
                       Pawee ChatBot
-                    </a>
+                    </h3>
                     <div className="h-0.5 grow mx-8 bg-foreground/10 group-hover:bg-brand/30 transition-colors hidden md:block"></div>
                     <span className="text-sm font-mono text-text-secondary">
                       06
