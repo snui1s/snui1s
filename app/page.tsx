@@ -29,6 +29,7 @@ import {
   SiVercel,
   SiRender,
   SiTypescript,
+  SiAstro,
 } from "react-icons/si";
 import { TbTerminal2 } from "react-icons/tb";
 import {
@@ -41,36 +42,17 @@ import {
 import { FaJava, FaDatabase } from "react-icons/fa6";
 import WavyDivider from "./components/WavyDivider";
 
-const LuckyCat = () => {
-  return (
-    <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 group cursor-pointer select-none hidden md:block">
-      <div className="relative flex items-end gap-1">
-        {/* Waving Hand */}
-        <span className="text-3xl md:text-4xl cat-waver inline-block origin-bottom-right">
-          👋
-        </span>
-        {/* Cat */}
-        <span className="text-4xl md:text-5xl transition-transform duration-300 group-hover:scale-110">
-          🐱
-        </span>
-      </div>
-      {/* Tooltip */}
-      <div className="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 text-[10px] uppercase tracking-widest font-black whitespace-nowrap hidden md:block">
-        Good luck!
-      </div>
-    </div>
-  );
-};
+
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-brand selection:text-background relative overflow-x-hidden">
       {/* Background Detail */}
-      <LuckyCat />
+
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center px-4 py-4 md:py-6 bg-background border-b border-white/5 shadow-lg lg:px-24">
         <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-[10px] md:text-sm font-medium tracking-wide text-text-secondary uppercase cursor-pointer">
-          {["Home", "Experience", "Projects", "About Me", "Contact"].map(
+          {["Home", "About Me", "Experience", "Projects", "Contact"].map(
             (item) => (
               <a
                 key={item}
@@ -107,7 +89,7 @@ export default function Home() {
             </div>
 
             <p className="mb-4 text-xs md:text-sm font-medium tracking-[0.2em] text-text-secondary uppercase">
-              Wanna build cool things, making mistakes, burnout.
+              Tryna bring LLMs into the web.
             </p>
             <h1 className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter leading-none mb-6">
               I&apos;m <span className="text-brand">Pawee</span>
@@ -115,7 +97,7 @@ export default function Home() {
             <p className="max-w-2xl text-lg md:text-xl text-text-secondary leading-relaxed font-light">
               A{" "}
               <span className="text-foreground font-medium">
-                Below Junior AI Engineer
+                Junior AI Engineer
               </span>{" "}
               based in Bangkok, Thailand. <br />I bridge the gap between{" "}
               <span className="text-brand font-medium">Data Science</span> and{" "}
@@ -167,7 +149,7 @@ export default function Home() {
                     <span className="text-brand mt-0.5">•</span>
                     <span>
                       Solving complex HR challenges using Programming and AI
-                      integration.
+                      integration like Excel automation, data pipeline and RAG.
                     </span>
                   </li>
                   <li className="flex gap-3">
@@ -539,6 +521,102 @@ export default function Home() {
               <div className="group relative block">
                 <div className="absolute -inset-4 bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                 <div className="relative">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs font-bold tracking-[0.2em] text-brand uppercase">
+                      Full-Stack Blog
+                    </span>
+                    <object>
+                      <a
+                        href="https://shiori-blog.space"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[10px] font-bold tracking-[0.2em] text-foreground/50 hover:text-brand transition-colors flex items-center gap-1.5 group/demo"
+                      >
+                        <HiSparkles className="text-brand" />
+                        LIVE DEMO
+                        <span className="w-4 h-[1px] bg-brand/30 group-hover/demo:w-6 transition-all"></span>
+                      </a>
+                    </object>
+                  </div>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
+                      <a
+                        href="https://github.com/snui1s/Shiori-Blog"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline decoration-brand decoration-2 underline-offset-4"
+                      >
+                        栞 Shiori
+                      </a>
+                    </h3>
+                    <div className="h-0.5 grow mx-8 bg-foreground/10 group-hover:bg-brand/30 transition-colors hidden md:block"></div>
+                    <span className="text-sm font-mono text-text-secondary">
+                      04
+                    </span>
+                  </div>
+                  <p className="text-lg md:text-xl text-text-secondary font-light max-w-3xl leading-relaxed">
+                    Shiori means bookmark — a high-performance blog
+                    template with a minimalist aesthetic. <br />
+                    <span className="text-foreground/80 italic font-medium">
+                      Features threaded comments, Google OAuth, a rich Tiptap
+                      editor, Cloudinary image CDN, Admin Dashboard, and a Turso database.
+                    </span>
+                  </p>
+                  <div className="mt-6 flex flex-wrap gap-x-3 gap-y-2 text-[10px] font-bold tracking-[0.15em] text-text-secondary/40 uppercase">
+                    {[
+                      "SSR & Hybrid Rendering",
+                      "Rich Text Editing (Tiptap)",
+                      "Google OAuth & Auth System",
+                      "Threaded Comment System",
+                      "Image CDN (Cloudinary)",
+                      "SEO & Structured Data",
+                    ].map((skill, i, arr) => (
+                      <div key={skill} className="flex items-center gap-3">
+                        <span>{skill}</span>
+                        {i < arr.length - 1 && (
+                          <div className="w-1 h-1 rounded-full bg-brand/20 shrink-0 hidden md:block" />
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4 text-2xl text-text-secondary/60">
+                    <div className="group/icon relative flex items-center gap-2 md:block">
+                      <SiAstro className="hover:text-[#FF5D01] transition-colors" />
+                      <span className="text-[10px] font-bold tracking-widest uppercase md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/icon:opacity-100 transition-opacity bg-background md:px-2 md:py-1 md:rounded whitespace-nowrap">
+                        Astro
+                      </span>
+                    </div>
+                    <div className="group/icon relative flex items-center gap-2 md:block">
+                      <SiReact className="hover:text-[#61DAFB] transition-colors" />
+                      <span className="text-[10px] font-bold tracking-widest uppercase md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/icon:opacity-100 transition-opacity bg-background md:px-2 md:py-1 md:rounded whitespace-nowrap">
+                        React
+                      </span>
+                    </div>
+                    <div className="group/icon relative flex items-center gap-2 md:block">
+                      <SiTypescript className="hover:text-[#3178C6] transition-colors" />
+                      <span className="text-[10px] font-bold tracking-widest uppercase md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/icon:opacity-100 transition-opacity bg-background md:px-2 md:py-1 md:rounded whitespace-nowrap">
+                        TypeScript
+                      </span>
+                    </div>
+                    <div className="group/icon relative flex items-center gap-2 md:block">
+                      <SiSqlite className="hover:text-[#003B57] transition-colors" />
+                      <span className="text-[10px] font-bold tracking-widest uppercase md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/icon:opacity-100 transition-opacity bg-background md:px-2 md:py-1 md:rounded whitespace-nowrap">
+                        Turso
+                      </span>
+                    </div>
+                    <div className="group/icon relative flex items-center gap-2 md:block">
+                      <SiTailwindcss className="hover:text-[#06B6D4] transition-colors" />
+                      <span className="text-[10px] font-bold tracking-widest uppercase md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/icon:opacity-100 transition-opacity bg-background md:px-2 md:py-1 md:rounded whitespace-nowrap">
+                        Tailwind
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group relative block">
+                <div className="absolute -inset-4 bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                <div className="relative">
                   <span className="text-xs font-bold tracking-[0.2em] text-brand uppercase mb-2 block">
                     Intern Project • Data & AI
                   </span>
@@ -555,7 +633,7 @@ export default function Home() {
                     </h3>
                     <div className="h-0.5 grow mx-8 bg-foreground/10 group-hover:bg-brand/30 transition-colors hidden md:block"></div>
                     <span className="text-sm font-mono text-text-secondary">
-                      04
+                      05
                     </span>
                   </div>
                   <p className="text-lg md:text-xl text-text-secondary font-light max-w-3xl leading-relaxed">
@@ -632,7 +710,7 @@ export default function Home() {
                     </h3>
                     <div className="h-0.5 grow mx-8 bg-foreground/10 group-hover:bg-brand/30 transition-colors hidden md:block"></div>
                     <span className="text-sm font-mono text-text-secondary">
-                      05
+                      06
                     </span>
                   </div>
                   <p className="text-lg md:text-xl text-text-secondary font-light max-w-3xl leading-relaxed">
@@ -719,7 +797,7 @@ export default function Home() {
                     </h3>
                     <div className="h-0.5 grow mx-8 bg-foreground/10 group-hover:bg-brand/30 transition-colors hidden md:block"></div>
                     <span className="text-sm font-mono text-text-secondary">
-                      06
+                      07
                     </span>
                   </div>
                   <p className="text-lg md:text-xl text-text-secondary font-light max-w-3xl leading-relaxed">
@@ -769,6 +847,8 @@ export default function Home() {
                     </div>
                 </div>
               </div>
+
+
             </div>
           </div>
         </section>
@@ -1059,6 +1139,12 @@ export default function Home() {
                   </p>
                   <div className="flex flex-wrap gap-x-8 gap-y-6 text-3xl text-text-secondary/60">
                     <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                      <SiAstro className="group-hover/s:text-[#FF5D01] transition-colors" />
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                        Astro
+                      </span>
+                    </div>
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
                       <SiNextdotjs className="group-hover/s:text-foreground transition-colors" />
                       <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
                         Next.js
@@ -1212,14 +1298,14 @@ export default function Home() {
       <footer className="py-20 border-t border-white/5 opacity-80">
         <div className="max-w-4xl mx-auto px-8 lg:px-0 flex flex-col items-center text-center gap-8">
           <div className="flex gap-8 text-[10px] md:text-xs text-text-secondary uppercase tracking-[0.3em] font-black">
+            <a href="#about-me" className="hover:text-brand transition-all">
+              About
+            </a>
             <a href="#experience" className="hover:text-brand transition-all">
               Experience
             </a>
             <a href="#projects" className="hover:text-brand transition-all">
               Projects
-            </a>
-            <a href="#about-me" className="hover:text-brand transition-all">
-              About
             </a>
             <a href="#contact" className="hover:text-brand transition-all">
               Contact
