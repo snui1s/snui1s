@@ -16,15 +16,17 @@ export default function Icon() {
     // ImageResponse JSX element
     <div
       style={{
-        fontSize: 32,
-        background: "transparent",
+        fontSize: 22,
+        background: "#ffffff", // white background
         width: "100%",
         height: "100%",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        color: "#fa8112", // brand color
+        color: "#1a1a1a", // bold black
         fontWeight: 900,
+        borderRadius: "50%",
+        border: "3px solid #ff3e3e", // thick red border
       }}
     >
       P
