@@ -41,6 +41,7 @@ import {
   HiPhone,
   HiMapPin,
   HiArrowLongRight,
+  HiArrowDownTray,
 } from "react-icons/hi2";
 import { FaJava, FaDatabase } from "react-icons/fa6";
 import WavyDivider from "./components/WavyDivider";
@@ -176,16 +177,6 @@ export default function Home() {
                 Let&apos;s Connect
               </a>
             </div>
-
-            <a
-              href="#about-me"
-              className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-50 hover:opacity-100 transition-opacity cursor-pointer hidden md:flex group/scroll z-20"
-            >
-              <span className="text-[10px] font-bold tracking-[0.3em] uppercase group-hover/scroll:text-brand transition-colors">
-                Scroll
-              </span>
-              <div className="w-px h-12 bg-gradient-to-b from-brand to-transparent"></div>
-            </a>
           </div>
         </section>
 
@@ -358,225 +349,266 @@ export default function Home() {
               <h3 className="text-xs font-bold tracking-[0.2em] text-brand uppercase mb-10 text-center">
                 Skills & Technologies
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
-                <div className="space-y-4">
-                  <p className="text-xs font-black uppercase tracking-widest text-text-secondary border-b border-brand/20 pb-2">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12">
+                <div className="space-y-4 flex flex-col items-center">
+                  <p className="text-xs font-black uppercase tracking-widest text-text-secondary border-b border-brand/20 pb-2 text-center w-full">
                     Languages
                   </p>
-                  <div className="flex flex-wrap gap-x-8 gap-y-6 text-3xl text-text-secondary/60">
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                  <div className="flex flex-wrap justify-center gap-x-8 gap-y-6 text-3xl text-text-secondary/60">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiPython className="group-hover/s:text-[#3776AB] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         Python
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiJavascript className="group-hover/s:text-[#F7DF1E] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         JavaScript
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiTypescript className="group-hover/s:text-[#3178C6] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         TypeScript
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiCplusplus className="group-hover/s:text-[#00599C] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         C++
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <FaJava className="group-hover/s:text-[#ED8B00] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         Java
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiPhp className="group-hover/s:text-[#777BB4] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         PHP
+                      </span>
+                    </div>
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
+                      <FaDatabase className="group-hover/s:text-brand transition-colors" />
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
+                        SQL
                       </span>
                     </div>
                   </div>
                 </div>
-                <div className="space-y-4">
-                  <p className="text-xs font-black uppercase tracking-widest text-text-secondary border-b border-brand/20 pb-2">
+                <div className="space-y-4 flex flex-col items-center">
+                  <p className="text-xs font-black uppercase tracking-widest text-text-secondary border-b border-brand/20 pb-2 text-center w-full">
                     Data & AI
                   </p>
-                  <div className="flex flex-wrap gap-x-8 gap-y-6 text-3xl text-text-secondary/60">
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                  <div className="flex flex-wrap justify-center gap-x-8 gap-y-6 text-3xl text-text-secondary/60">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiPandas className="group-hover/s:text-[#150458] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         Pandas
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiNumpy className="group-hover/s:text-[#013243] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         NumPy
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiScikitlearn className="group-hover/s:text-[#F7931E] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         Scikit
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiTensorflow className="group-hover/s:text-[#FF6F00] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         TF
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiKeras className="group-hover/s:text-[#D00000] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         Keras
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiPytorch className="group-hover/s:text-[#EE4C2C] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         PyTorch
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiLangchain className="group-hover/s:text-brand transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
+                        LangChain
+                      </span>
+                    </div>
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
+                      <SiLangchain className="group-hover/s:text-brand transition-colors" />
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         LangGraph
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
+                      <HiSparkles className="group-hover/s:text-brand transition-colors" />
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
+                        RAG
+                      </span>
+                    </div>
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiHuggingface className="group-hover/s:text-[#FFD21E] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         HuggingFace
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <FaDatabase className="group-hover/s:text-brand transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         ChromaDB
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <FaDatabase className="group-hover/s:text-[#E91E63] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         Qdrant
                       </span>
                     </div>
                   </div>
                 </div>
-                <div className="space-y-4">
-                  <p className="text-xs font-black uppercase tracking-widest text-text-secondary border-b border-brand/20 pb-2">
+                <div className="space-y-4 flex flex-col items-center">
+                  <p className="text-xs font-black uppercase tracking-widest text-text-secondary border-b border-brand/20 pb-2 text-center w-full">
                     Web & Backend
                   </p>
-                  <div className="flex flex-wrap gap-x-8 gap-y-6 text-3xl text-text-secondary/60">
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                  <div className="flex flex-wrap justify-center gap-x-8 gap-y-6 text-3xl text-text-secondary/60">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiAstro className="group-hover/s:text-[#FF5D01] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         Astro
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiNextdotjs className="group-hover/s:text-foreground transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         Next.js
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiReact className="group-hover/s:text-[#61DAFB] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         React
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiNodedotjs className="group-hover/s:text-[#339933] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         Node.js
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiExpress className="group-hover/s:text-foreground transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         Express
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiFastapi className="group-hover/s:text-[#05998B] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         FastAPI
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiTauri className="group-hover/s:text-[#24C8DB] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         Tauri
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiTailwindcss className="group-hover/s:text-[#06B6D4] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         Tailwind
                       </span>
                     </div>
                   </div>
                 </div>
-                <div className="space-y-4">
-                  <p className="text-xs font-black uppercase tracking-widest text-text-secondary border-b border-brand/20 pb-2">
+                <div className="space-y-4 flex flex-col items-center">
+                  <p className="text-xs font-black uppercase tracking-widest text-text-secondary border-b border-brand/20 pb-2 text-center w-full">
                     Tools & DB
                   </p>
-                  <div className="flex flex-wrap gap-x-8 gap-y-6 text-3xl text-text-secondary/60">
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                  <div className="flex flex-wrap justify-center gap-x-8 gap-y-6 text-3xl text-text-secondary/60">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiPostgresql className="group-hover/s:text-[#336791] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         PostgreSQL
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiSqlite className="group-hover/s:text-[#003B57] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         SQLite
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiGit className="group-hover/s:text-[#F05032] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         Git
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiDocker className="group-hover/s:text-[#2496ED] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         Docker
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <TbTerminal2 className="group-hover/s:text-[#2EAD33] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         Playwright
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiJupyter className="group-hover/s:text-[#F37626] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         Jupyter
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiVercel className="group-hover/s:text-foreground transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         Vercel
                       </span>
                     </div>
-                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center">
+                    <div className="group/s relative cursor-pointer flex items-center gap-3 md:inline-flex md:items-center md:justify-center w-fit">
                       <SiRender className="group-hover/s:text-[#D6F8F0] transition-colors" />
-                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase">
+                      <span className="text-[10px] bg-background md:px-2 md:py-1 md:rounded md:absolute md:-top-8 md:left-1/2 md:-translate-x-1/2 md:opacity-0 md:group-hover/s:opacity-100 transition-opacity whitespace-nowrap font-bold tracking-widest uppercase pointer-events-none">
                         Render
                       </span>
                     </div>
+                  </div>
+                </div>
+                <div className="space-y-4 flex flex-col items-center">
+                  <p className="text-xs font-black uppercase tracking-widest text-text-secondary border-b border-brand/20 pb-2 text-center w-full">
+                    Soft Skills
+                  </p>
+                  <div className="flex flex-col items-center space-y-3">
+                    {[
+                      "Problem Solving",
+                      "Team Collaboration",
+                      "Analytical Thinking",
+                      "Adaptation",
+                    ].map((skill) => (
+                      <div
+                        key={skill}
+                        className="flex items-center gap-2 group/skill"
+                      >
+                        <div className="w-1 h-1 rounded-full bg-brand/40 group-hover/skill:bg-brand transition-colors" />
+                        <span className="text-[10px] font-bold tracking-[0.15em] text-text-secondary/80 group-hover/skill:text-brand transition-colors uppercase">
+                          {skill}
+                        </span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -738,9 +770,23 @@ export default function Home() {
               <div className="group relative block">
                 <div className="absolute -inset-4 bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                 <div className="relative">
-                  <span className="text-xs font-bold tracking-[0.2em] text-brand uppercase mb-2 block">
-                    Featured Project
-                  </span>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs font-bold tracking-[0.2em] text-brand uppercase">
+                      Featured Project
+                    </span>
+                    <object>
+                      <a
+                        href="https://github.com/snui1s/Raku/releases/tag/v1.0.3"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[10px] font-bold tracking-[0.2em] text-foreground/50 hover:text-brand transition-colors flex items-center gap-1.5 group/download"
+                      >
+                        DOWNLOAD v1.0.3
+                        <HiArrowDownTray className="text-brand group-hover/download:translate-x-1 transition-transform ml-0.5" />
+                        <span className="w-4 h-px bg-brand/30 group-hover/download:w-6 transition-all"></span>
+                      </a>
+                    </object>
+                  </div>
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
                       <a
