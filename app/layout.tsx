@@ -15,6 +15,21 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Pawee's Portfolio",
   description: "Personal website and portfolio of Pawee Indulakshana",
+  openGraph: {
+    title: "Pawee's Portfolio",
+    description: "Personal website and portfolio of Pawee Indulakshana",
+    url: "https://snui1s.github.io",
+    siteName: "Pawee's Portfolio",
+    images: [
+      {
+        url: "/profilepic2.jpg",
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

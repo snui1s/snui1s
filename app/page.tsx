@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import NextImage from "next/image";
 import {
   SiReact,
@@ -47,6 +47,8 @@ import { FaJava, FaDatabase } from "react-icons/fa6";
 import WavyDivider from "./components/WavyDivider";
 
 export default function Home() {
+  const [activeSection, setActiveSection] = useState("home");
+
   useEffect(() => {
     // Manual smooth scroll function to bypass potential OS/browser restrictions
     const smoothScroll = (targetY: number, duration: number = 500) => {
@@ -95,7 +97,26 @@ export default function Home() {
     };
 
     document.addEventListener("click", handleAnchorClick);
-    return () => document.removeEventListener("click", handleAnchorClick);
+
+    // Add Intersection Observer for active section detection
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -40% 0px" },
+    );
+
+    const sections = document.querySelectorAll("section[id]");
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      document.removeEventListener("click", handleAnchorClick);
+      sections.forEach((section) => observer.unobserve(section));
+    };
   }, []);
 
   return (
@@ -106,16 +127,27 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center px-4 py-4 md:py-6 bg-background border-b border-white/5 shadow-lg lg:px-24">
         <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-[10px] md:text-sm font-medium tracking-wide text-text-secondary uppercase cursor-pointer">
           {["Home", "About Me", "Experience", "Projects", "Contact"].map(
-            (item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase().replace(" ", "-")}`}
-                className="hover:text-brand transition-all duration-300 relative group"
-              >
-                {item}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand transition-all duration-300 group-hover:w-full"></span>
-              </a>
-            ),
+            (item) => {
+              const targetId = item.toLowerCase().replace(" ", "-");
+              const isActive = activeSection === targetId;
+
+              return (
+                <a
+                  key={item}
+                  href={`#${targetId}`}
+                  className={`hover:text-brand transition-all duration-300 relative group ${
+                    isActive ? "text-brand" : ""
+                  }`}
+                >
+                  {item}
+                  <span
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-brand transition-all duration-300 ${
+                      isActive ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  ></span>
+                </a>
+              );
+            },
           )}
         </div>
       </nav>
@@ -316,9 +348,9 @@ export default function Home() {
                       <span className="text-foreground font-medium border-b border-brand/20 pb-0.5">
                         AI-augmented development
                       </span>{" "}
-                      (Vibe Coding). <br></br>I use AI as a speed booster to
-                      handle the coding, so I can focus on my true goal{" "}
-                      <br></br> to being a{" "}
+                      (Vibe Coding). <br />I use AI as a speed booster to handle
+                      the coding, so I can focus on my true goal <br /> of
+                      becoming a{" "}
                       <span className="text-brand font-bold">
                         Problem Solver
                       </span>{" "}
@@ -349,7 +381,7 @@ export default function Home() {
               <h3 className="text-xs font-bold tracking-[0.2em] text-brand uppercase mb-10 text-center">
                 Skills & Technologies
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12">
+              <div className="flex flex-wrap justify-center sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
                 <div className="space-y-4 flex flex-col items-center">
                   <p className="text-xs font-black uppercase tracking-widest text-text-secondary border-b border-brand/20 pb-2 text-center w-full">
                     Languages
@@ -588,29 +620,6 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="space-y-4 flex flex-col items-center">
-                  <p className="text-xs font-black uppercase tracking-widest text-text-secondary border-b border-brand/20 pb-2 text-center w-full">
-                    Soft Skills
-                  </p>
-                  <div className="flex flex-col items-center space-y-3">
-                    {[
-                      "Problem Solving",
-                      "Team Collaboration",
-                      "Analytical Thinking",
-                      "Adaptation",
-                    ].map((skill) => (
-                      <div
-                        key={skill}
-                        className="flex items-center gap-2 group/skill"
-                      >
-                        <div className="w-1 h-1 rounded-full bg-brand/40 group-hover/skill:bg-brand transition-colors" />
-                        <span className="text-[10px] font-bold tracking-[0.15em] text-text-secondary/80 group-hover/skill:text-brand transition-colors uppercase">
-                          {skill}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -774,18 +783,16 @@ export default function Home() {
                     <span className="text-xs font-bold tracking-[0.2em] text-brand uppercase">
                       Featured Project
                     </span>
-                    <object>
-                      <a
-                        href="https://github.com/snui1s/Raku/releases/tag/v1.0.3"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[10px] font-bold tracking-[0.2em] text-foreground/50 hover:text-brand transition-colors flex items-center gap-1.5 group/download"
-                      >
-                        DOWNLOAD v1.0.3
-                        <HiArrowDownTray className="text-brand group-hover/download:translate-x-1 transition-transform ml-0.5" />
-                        <span className="w-4 h-px bg-brand/30 group-hover/download:w-6 transition-all"></span>
-                      </a>
-                    </object>
+                    <a
+                      href="https://github.com/snui1s/Raku/releases/tag/v1.0.3"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[10px] font-bold tracking-[0.2em] text-foreground/50 hover:text-brand transition-colors flex items-center gap-1.5 group/download"
+                    >
+                      DOWNLOAD v1.0.3
+                      <HiArrowDownTray className="text-brand group-hover/download:translate-x-1 transition-transform ml-0.5" />
+                      <span className="w-4 h-px bg-brand/30 group-hover/download:w-6 transition-all"></span>
+                    </a>
                   </div>
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
@@ -856,18 +863,16 @@ export default function Home() {
                     <span className="text-xs font-bold tracking-[0.2em] text-brand uppercase">
                       Intern Project • AI & Psychology
                     </span>
-                    <object>
-                      <a
-                        href="https://kemii-snails.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[10px] font-bold tracking-[0.2em] text-foreground/50 hover:text-brand transition-colors flex items-center gap-1.5 group/demo"
-                      >
-                        <HiSparkles className="text-brand" />
-                        LIVE DEMO
-                        <span className="w-4 h-px bg-brand/30 group-hover/demo:w-6 transition-all"></span>
-                      </a>
-                    </object>
+                    <a
+                      href="https://kemii-snails.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[10px] font-bold tracking-[0.2em] text-foreground/50 hover:text-brand transition-colors flex items-center gap-1.5 group/demo"
+                    >
+                      <HiSparkles className="text-brand" />
+                      LIVE DEMO
+                      <span className="w-4 h-px bg-brand/30 group-hover/demo:w-6 transition-all"></span>
+                    </a>
                   </div>
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
@@ -947,18 +952,16 @@ export default function Home() {
                     <span className="text-xs font-bold tracking-[0.2em] text-brand uppercase">
                       AI Agent
                     </span>
-                    <object>
-                      <a
-                        href="https://skrut.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[10px] font-bold tracking-[0.2em] text-foreground/50 hover:text-brand transition-colors flex items-center gap-1.5 group/demo"
-                      >
-                        <HiSparkles className="text-brand" />
-                        LIVE DEMO
-                        <span className="w-4 h-px bg-brand/30 group-hover/demo:w-6 transition-all"></span>
-                      </a>
-                    </object>
+                    <a
+                      href="https://skrut.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[10px] font-bold tracking-[0.2em] text-foreground/50 hover:text-brand transition-colors flex items-center gap-1.5 group/demo"
+                    >
+                      <HiSparkles className="text-brand" />
+                      LIVE DEMO
+                      <span className="w-4 h-px bg-brand/30 group-hover/demo:w-6 transition-all"></span>
+                    </a>
                   </div>
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
@@ -1037,18 +1040,16 @@ export default function Home() {
                     <span className="text-xs font-bold tracking-[0.2em] text-brand uppercase">
                       Full-Stack Blog
                     </span>
-                    <object>
-                      <a
-                        href="https://shiori-blog.space"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[10px] font-bold tracking-[0.2em] text-foreground/50 hover:text-brand transition-colors flex items-center gap-1.5 group/demo"
-                      >
-                        <HiSparkles className="text-brand" />
-                        LIVE DEMO
-                        <span className="w-4 h-px bg-brand/30 group-hover/demo:w-6 transition-all"></span>
-                      </a>
-                    </object>
+                    <a
+                      href="https://shiori-blog.space"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[10px] font-bold tracking-[0.2em] text-foreground/50 hover:text-brand transition-colors flex items-center gap-1.5 group/demo"
+                    >
+                      <HiSparkles className="text-brand" />
+                      LIVE DEMO
+                      <span className="w-4 h-px bg-brand/30 group-hover/demo:w-6 transition-all"></span>
+                    </a>
                   </div>
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
@@ -1284,18 +1285,16 @@ export default function Home() {
                     <span className="text-xs font-bold tracking-[0.2em] text-brand uppercase">
                       Interactive AI Agent
                     </span>
-                    <object>
-                      <a
-                        href="https://pawee-chatbot.onrender.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[10px] font-bold tracking-[0.2em] text-foreground/50 hover:text-brand transition-colors flex items-center gap-1.5 group/demo"
-                      >
-                        <HiSparkles className="text-brand" />
-                        LIVE DEMO
-                        <span className="w-4 h-px bg-brand/30 group-hover/demo:w-6 transition-all"></span>
-                      </a>
-                    </object>
+                    <a
+                      href="https://pawee-chatbot.onrender.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[10px] font-bold tracking-[0.2em] text-foreground/50 hover:text-brand transition-colors flex items-center gap-1.5 group/demo"
+                    >
+                      <HiSparkles className="text-brand" />
+                      LIVE DEMO
+                      <span className="w-4 h-px bg-brand/30 group-hover/demo:w-6 transition-all"></span>
+                    </a>
                   </div>
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-3xl md:text-5xl font-black tracking-tight group-hover:text-brand transition-colors">
