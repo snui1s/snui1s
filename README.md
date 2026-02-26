@@ -19,13 +19,13 @@ I love building tools that solve real-world frustrations, like **Raku** and **Sk
 
 ### On Vibe Coding & AI
 
-To me, AI isn't a shortcut, it's a force multiplier. It allows me to bridge the gap between a raw idea and a polished product at the speed of thought.
+To me, AI isn't a shortcut, it's a force multiplier. It allows me to bring a raw idea to a polished product at the speed of thought.
 
 ### The Environment
 
 If I’m working on a project, you’ll probably find me:
 
-- Coding in a room with a cool breeze and a minimal, aesthetic desk setup.
+- Coding in a room with a cool breeze and a messy desk setup.
 - Listening to sad piano OSTs from [this playlist](https://open.spotify.com/playlist/5W3LKsr7PeCD05AMZMNxJd?si=fafd9bef597c4a59).
 - Talking with AI as a friend.
 
