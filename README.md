@@ -17,17 +17,10 @@ I spend my days cookin between **Data Science** and **Full-Stack Development**. 
 
 I love building tools that solve real-world frustrations, like **Raku** and **Skrut**. Whenever I find a problem that I think can be fixed with code, I don't hesitate to build it.
 
-### The Environment
 
-If I’m working on a project, you’ll probably find me:
+### Open Source
 
-- Coding in a room with a cool chuhai and a messy desk setup.
-- Listening to Acid Jazz.
-- Talking with AI as a friend.
-
-### Open Source Heart
-
-Everything I build here is **Open Source**. I believe knowledge should be shared, and mistakes should be made in public so we can all learn faster. Feel free to take my code, break it, or make it yours.
+Almost everything I build here is **Open Source**. I believe knowledge should be shared, and mistakes should be made in public so we can all learn faster. Feel free to take my code, break it, or make it yours.
 
 ### Portfolio
 You can check out my full background here:
