@@ -24,7 +24,7 @@ Almost everything I build here is **Open Source**. I believe knowledge should be
 
 ### Portfolio
 You can check out my full background here:
-👉 [**snui1s.vercel.app**](snui1s.com)
+👉 [**snui1s.com**](snui1s.com)
 
 ---
 
